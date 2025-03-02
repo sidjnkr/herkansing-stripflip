@@ -1,0 +1,386 @@
+/* css van pagina 1 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    height: 667px;
+    border: 2px solid black;
+}
+
+header {
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    padding:10px;
+    width: 350px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    letter-spacing: 8px;
+}
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    width: 300px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px black;
+    height: fit-content;
+}
+.panel:nth-child(2) {
+    background-color: #add8e6; 
+    height: 150px;
+}
+.panel:nth-child(3) {
+    background-color: #0071BC; 
+    height: 160px;
+}
+.panel:nth-child(4) {
+    background-color: #7484FF; 
+    height: 140px;
+}
+.character-balloon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .character {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .panel .speech-balloon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+  nav {
+    background-color: whitesmoke;
+    padding: 10px 0;
+    border: 1px solid black;
+    width: 375px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    text-align: center;
+    }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    display: block;
+  }
+  
+  nav img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto 5px;
+  }
+  
+  @media screen and (max-width: 375px) {
+    .stripflip-header {
+      font-size: 1.8rem;
+      padding: 15px;
+    }
+  
+    .character {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .speech-balloon {
+      font-size: 0.8rem;
+      max-width: 80%;
+    }
+  
+    .nav img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  /* css van pagina 2 */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; 
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .strip {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Laat de container de inhoud bepalen */
+    overflow-y: visible; /* Zorg dat het scrollbaar blijft */
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 65px;
+  }
+  .header-panel {
+    background-color: #22B573;
+    color: white;
+    text-align: center;
+    padding:10px;
+    width: 350px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 75px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    letter-spacing: 8px;
+}
+  .panel-row {
+    display: flex;
+    justify-content: space-between; /* Zorgt voor ruimte tussen panels */
+    gap: 10px; /* Optioneel, extra ruimte tussen de panels */
+  } 
+.panel-small {
+  position: relative;
+    flex: 1; 
+    max-width: 48%; 
+    background-color:#39B54A; 
+    border: 2px solid #000; 
+    border-radius: 10px; 
+    padding: 10px; 
+    margin-top: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.speech-balloon {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid black;
+  max-width: 80%;
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: center;
+  height: fit-content;
+}
+/* zorgt ervoor dat de poppetjes onder de balonnetjes staan */
+  .panel-small .character-balloon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .panel-small .speech-balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -18px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-width: 10px; 
+    border-style: solid;
+    border-color: white transparent transparent; 
+    height: 0; 
+  }
+  /* Lambiek css */
+  body.lambiek {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Vast formaat volgens je ontwerp */
+    min-height: 700px;
+    border: 2px solid black;
+    overflow-y: auto;
+    height: auto;
+    padding-bottom: 60px;
+  }
+  
+  .lambiek .header-panel {
+    background-color: #FFA07A;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    border-radius: 75px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    letter-spacing: 8px;
+  }
+  
+  .lambiek .panel-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .lambiek .panel-small {
+    flex: 1;
+    max-width: 48%;
+    background-color: #FFCC99;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .lambiek .panel-small img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .lambiek .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF69B4;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    height: fit-content;
+  }
+  .panel.speciale-panel {
+    height: 250px;
+  }
+  .lambiek .panel img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-bottom: 10px;
+  }
+  
+  .lambiek .panel .tekst {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  
+  .lambiek .large-panel {
+    margin: 20px 0;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .lambiek .large-panel img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .lambiek .character-balloon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .lambiek .character-balloon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+  
+  .lambiek.speech-balloon {
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    max-width: 80%;
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  .lambiek .panel .speech-balloon {
+    position: relative;
+    background-color: white;
+    padding: 15px; /* Groter maken voor langere tekst */
+    border-radius: 15px;
+    border: 2px solid black;
+    max-width: 90%; /* Zorg dat het breed genoeg is */
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 10px; /* Optioneel, afstand tussen tekst en afbeelding */
+    box-shadow: 3px 3px 0px black;
+  }
+  .lambiek .panel .speech-balloon {
+    position: relative;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid black;
+    max-width: 90%;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 3px 3px 0px black;
+  }
+  .lambiek .panel .speech-balloon::after {
+    content: '';
+    position: absolute;
+    top: -11%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+  }
